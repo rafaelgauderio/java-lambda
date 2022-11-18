@@ -42,6 +42,19 @@ public class Program {
 		for(Produto nicknamePorPreco : list) {
 			System.out.println(nicknamePorPreco);
 		}	
+		
+		
+		// usando exepressão lambida. Função anônima
+		Comparator <Produto> compLambda = (p1,p2) -> {
+			return p1.getPreco().compareTo(p2.getPreco());
+		};
+		
+		list.sort(compLambda);
+		
+		System.out.println("\nProdutos ordenados por preco usando expressão Lambda");
+		for(Produto nicknamePorPreco : list) {
+			System.out.println(nicknamePorPreco);
+		}	
 		 
 	 }
 
