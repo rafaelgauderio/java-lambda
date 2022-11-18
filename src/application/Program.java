@@ -38,23 +38,38 @@ public class Program {
 		
 		list.sort(comp);
 		
-		System.out.println("\nProdutos ordenados por preco");
+		System.out.println("\nProdutos ordenados por preço");
 		for(Produto nicknamePorPreco : list) {
 			System.out.println(nicknamePorPreco);
 		}	
 		
 		
 		// usando exepressão lambida. Função anônima
+		// função lambda também são chamadas de arrow function
+		// compilador faz inferências de tipo nas funções lambda
 		Comparator <Produto> compLambda = (p1,p2) -> {
 			return p1.getPreco().compareTo(p2.getPreco());
 		};
 		
 		list.sort(compLambda);
 		
-		System.out.println("\nProdutos ordenados por preco usando expressão Lambda");
+		System.out.println("\nProdutos ordenados por preço usando expressão Lambda");
 		for(Produto nicknamePorPreco : list) {
 			System.out.println(nicknamePorPreco);
 		}	
+		
+		
+		// expressão lambda ainda mais  compacta
+		
+		//Comparator <Produto> compLambdaCompacta = (p1,p2) -> p1.getNome().toLowerCase().compareTo(p2.getNome().toLowerCase());
+		//list.sort(compLambdaCompacta);
+		
+		list.sort((p1,p2) -> p1.getNome().toLowerCase().compareTo(p2.getNome().toLowerCase()));
+		
+		System.out.println("\nProdutos ordenados por Nome usando expressão Lambda compacta");
+		for(Produto nicknamePorNome : list) {
+			System.out.println(nicknamePorNome);
+		}
 		 
 	 }
 
