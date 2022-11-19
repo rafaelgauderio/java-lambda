@@ -8,6 +8,12 @@ import entitities.MeuComparator;
 import entitities.Produto;
 
 public class Program {
+	
+	
+public static int compararProdutosPorPreco(Produto p1, Produto p2) {
+	
+	return p1.getPreco().compareTo(p2.getPreco());
+}
 
  public static void main(String [] args) {
 		 
@@ -70,6 +76,10 @@ public class Program {
 		for(Produto nicknamePorNome : list) {
 			System.out.println(nicknamePorNome);
 		}
+		
+		System.out.println("\nUsando uma função como agumento de outra função");
+		list.sort(Program::compararProdutosPorPreco);
+		list.forEach(System.out::println);
 		 
 	 }
 
