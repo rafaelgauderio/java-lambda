@@ -18,7 +18,12 @@ public class Definicoes {
 				+ "Expressividade, ou seja, o código costuma ser consico (pequeno);\n"
 				+ "Tipagem dinâmica e inferências é algo comum na programação funcional.\n"
 				+ "EXPRESSÃO LAMBDA\n"
-				+ "\tÉ uma função anônima de primeira classe.\n");
+				+ "\tÉ uma função anônima de primeira classe.\n"
+				+ "INTERFACE FUNCIONAL\n"
+				+ "\tÉ uma interface que poussui apenas um único método abstrado.\n"
+				+ "\tSuas implementações são tratadas como expressões lambda.\n"
+				+ "\tElas tem um mapeamento direto com a expressão lambda.\n"
+				+ "Exemplos de interface funcional: Predicate, Function, Cosumer");
 
 	}
 
