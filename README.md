@@ -1,1 +1,1 @@
-## Definições de exemplos de funções lambda e programação funcional
+## Definições e exemplos de funções lambda e programação funcional
